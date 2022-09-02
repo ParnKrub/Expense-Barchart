@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body class="bg-neutral-cream flex justify-center items-center min-h-[100vh]">
+    <div
+      class="flex-col w-[400px] max-w-[95%] min-h-[500px] border-2 border-black"
+    >
+      <div
+        class="flex justify-between items-center p-6 mb-4 bg-primary-softred rounded-2xl min-h-[20%] text-neutral-cream"
+      >
+        <div>
+          <h1 class="text-xs mb-1">My Balance</h1>
+          <h3 class="font-bold text-lg">$921.48</h3>
+        </div>
+        <div>
+          <img src="./images/logo.svg" alt="logo" class="h-8" />
+        </div>
+      </div>
+      <div class="bg-neutral-paleorange p-6 rounded-2xl">
+        <h2 class="font-bold text-lg text-neutral-darkbrown">
+          Spending - Last 7 days
+        </h2>
+        <div>mon tue wed thu fri sat sun</div>
+        <hr class="border-neutral-cream my-5" />
+        <div class="flex justify-between items-end">
+          <div>
+            <h2 class="text-xs text-neutral-mediumbrown">Total this month</h2>
+            <h3 class="text-3xl font-bold text-neutral-darkbrown">$478.33</h3>
+          </div>
+          <div class="text-xs text-right">
+            <h3 class="font-bold text-neutral-darkbrown">+2.4%</h3>
+            <h2 class="text-neutral-mediumbrown">from last month</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
