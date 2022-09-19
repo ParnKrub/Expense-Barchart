@@ -12,12 +12,12 @@
       href="./images/favicon-32x32.png"
     />
     <link href="./dist/output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+    <script type="module" src="./js/CreateChart.js" defer></script>
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
   <body class="bg-neutral-cream flex justify-center items-center min-h-[100vh]">
-    <div
-      class="flex-col w-[400px] max-w-[95%] min-h-[500px] border-2 border-black"
-    >
+    <div class="flex-col w-[400px] max-w-[95%]">
       <div
         class="flex justify-between items-center p-6 mb-4 bg-primary-softred rounded-2xl min-h-[20%] text-neutral-cream"
       >
@@ -37,38 +37,59 @@
           class="flex items-end text-center text-neutral-mediumbrown text-[10px]"
         >
           <div class="flex-col flex-1">
-            <div class="my-1 mx-1.5 h-[100px] bg-primary-softred rounded"></div>
+            <div
+              id="mon-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="mon-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>mon</div>
           </div>
           <div class="flex-col flex-1">
-            <div class="my-1 mx-1.5 h-[100px] bg-primary-softred rounded"></div>
+            <div
+              id="tue-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="tue-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>tue</div>
           </div>
           <div class="flex-col flex-1">
-            <div class="my-1 mx-1.5 h-[100px] bg-primary-softred rounded"></div>
+            <div
+              id="wed-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="wed-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>wed</div>
           </div>
           <div class="flex-col flex-1">
-            <div class="my-1 mx-1.5 h-[100px] bg-primary-softred rounded"></div>
+            <div
+              id="thu-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="thu-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>thu</div>
           </div>
           <div class="flex-col flex-1">
             <div
-              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange font-bold"
-            >
-              $69.69
-            </div>
-            <div class="my-1 mx-1.5 h-[350px] bg-primary-softred rounded"></div>
+              id="fri-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="fri-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>fri</div>
           </div>
           <div class="flex-col flex-1">
-            <div class="my-1 mx-1.5 h-[100px] bg-primary-softred rounded"></div>
+            <div
+              id="sat-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
+            ></div>
+            <div id="sat-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>sat</div>
           </div>
           <div class="flex-col flex-1">
             <div
-              class="my-1 mx-1.5 h-[300px] bg-primary-softred hover:bg-primary-softred/70 rounded"
+              id="sun-amount"
+              class="invisible p-1 my-1 bg-neutral-darkbrown rounded text-neutral-paleorange"
             ></div>
+            <div id="sun-bar" class="my-1 mx-1.5 rounded bt-hover"></div>
             <div>sun</div>
           </div>
         </div>
@@ -76,7 +97,9 @@
         <div class="flex justify-between items-end">
           <div>
             <h2 class="text-xs text-neutral-mediumbrown">Total this month</h2>
-            <h3 class="text-3xl font-bold text-neutral-darkbrown">$478.33</h3>
+            <h3 id="total" class="text-3xl font-bold text-neutral-darkbrown">
+              $478.33
+            </h3>
           </div>
           <div class="text-xs text-right">
             <h3 class="font-bold text-neutral-darkbrown">+2.4%</h3>
